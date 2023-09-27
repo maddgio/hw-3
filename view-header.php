@@ -23,7 +23,7 @@
           <a class="nav-link" href="game.php">Games</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post-players.php">Players</a>
+          <a class="nav-link" href="players.php">Players</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="team-stats.php">Team Stats</a>
