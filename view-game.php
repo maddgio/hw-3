@@ -9,10 +9,9 @@
       </tr>
     </thead>
     <tbody>
-
-
-
-      
+<?php
+while ($game = $lacrosee_game
+?>
 <tr>
   <td><?php echo $game['game_id']; ?></td>
   <td><?php echo $game['game_date']; ?></td>
