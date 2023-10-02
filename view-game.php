@@ -19,7 +19,7 @@
   <td><?php echo $game['game_location']; ?></td>
 </tr>
 <?php
-}
+
 ?> 
     </tbody>
   </table>
