@@ -9,9 +9,10 @@
       </tr>
     </thead>
     <tbody>
-<?php
-while ($lacrosse_game = $game->fetch_assoc()) {
-?>
+
+
+
+      
 <tr>
   <td><?php echo $game['game_id']; ?></td>
   <td><?php echo $game['game_date']; ?></td>
