@@ -10,7 +10,7 @@
     </thead>
     <tbody>
 <?php
-while ($game = $lacrosse_game->fetch_assoc()) {
+while ($lacrosse_game = $game->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $game['game_id']; ?></td>
