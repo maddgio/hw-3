@@ -10,15 +10,15 @@
     </thead>
     <tbody>
 <?php
-while ($game = $lacrosee_game
+while ($game = $Game->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $game['game_id']; ?></td>
-  <td><?php echo $game['game_date']; ?></td>
-  <td><?php echo $game['game_location']; ?></td>
+  <td><?php echo $Game['game_id']; ?></td>
+  <td><?php echo $Game['game_date']; ?></td>
+  <td><?php echo $Game['game_location']; ?></td>
 </tr>
-<?php
-
+<?PHP
+}
 ?> 
     </tbody>
   </table>
