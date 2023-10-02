@@ -6,7 +6,7 @@
         <th>ID</th>
         <th>Date</th>
         <th>Location</th>
-        <th>XX</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
