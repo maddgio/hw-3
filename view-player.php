@@ -11,13 +11,13 @@
     </thead>
     <tbody>
 <?php
-while ($player = $Players->fetch_assoc()) {
+while ($lax_player = $Player->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $player['player_id']; ?></td>
-  <td><?php echo $player['player_name']; ?></td>
-  <td><?php echo $player['player_position']; ?></td>
-  <td><?php echo $player['player_year']; ?></td>
+  <td><?php echo $lax_player['player_id']; ?></td>
+  <td><?php echo $lax_player['player_name']; ?></td>
+  <td><?php echo $lax_player['player_position']; ?></td>
+  <td><?php echo $lax_player['player_year']; ?></td>
 </tr>
 <?PHP
 }
