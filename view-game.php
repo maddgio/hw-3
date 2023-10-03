@@ -17,7 +17,7 @@ while ($lacrosse_game = $Game->fetch_assoc()) {
   <td><?php echo $lacrosse_game['game_id']; ?></td>
   <td><?php echo $lacrosse_game['game_date']; ?></td>
   <td><?php echo $lacrosse_game['game_location']; ?></td>
-  <td><a href="team-stats.php?id="<?php echo $lacrosse_game['game_id']; ?>">Team Stats</a></td>
+  <a href="team-stats.php?id=<?php echo $lacrosse_game['game_id']; ?>">
 </tr>
 <?PHP
 }
