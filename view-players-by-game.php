@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-<?php $play_game = $GamePlayers->fetch_assoc()) {
+<?PHP ($play_game = $GamePlayers->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $play_game['game_id']; ?></td>
