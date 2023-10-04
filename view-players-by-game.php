@@ -10,13 +10,13 @@
       </tr>
     </thead>
     <tbody>
-<?PHP ($play_game = $GamePlayers->fetch_assoc()) {
+<?PHP ($pgame = $GamePlayers->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $play_game['game_id']; ?></td>
-  <td><?php echo $play_game['game_date']; ?></td>
- <td><?php echo $play_game['player_id']; ?></td>
-  <td><?php echo $play_game['player_name']; ?></td>
+  <td><?php echo $pgame['game_id']; ?></td>
+  <td><?php echo $pgame['game_date']; ?></td>
+ <td><?php echo $pgame['player_id']; ?></td>
+  <td><?php echo $pgame['player_name']; ?></td>
 </tr>
 <?PHP
 }
