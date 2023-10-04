@@ -17,7 +17,6 @@
 while ($team_stats = $Stats->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $team_stats['team_id']; ?></td>
   <td><?php echo $team_stats['game_id']; ?></td>
   <td><?php echo $team_stats['game_date']; ?></td>
   <td><?php echo $team_stats['game_location']; ?></td>
