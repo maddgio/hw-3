@@ -11,7 +11,7 @@
     </thead>
     <tbody>
 <?PHP ($play_game = $GamePlayers->fetch_assoc()) {
-?>
+?>;
 <tr>
   <td><?php echo $play_game['game_id']; ?></td>
   <td><?php echo $play_game['game_date']; ?></td>
