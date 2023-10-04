@@ -10,7 +10,8 @@
       </tr>
     </thead>
     <tbody>
-<?PHP ($pgame = $GamePlayers->fetch_assoc()) {
+<?PHP 
+while ($pgame = $GamePlayers->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $pgame['game_id']; ?></td>
@@ -24,3 +25,6 @@
     </tbody>
   </table>
 </div>
+
+
+<tr>
