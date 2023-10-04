@@ -1,4 +1,4 @@
-<h1>Team Stats</h1>
+<h1>Players by Game </h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
