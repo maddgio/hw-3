@@ -20,7 +20,7 @@ while ($lacrosse_game = $Game->fetch_assoc()) {
         <td><?php echo $lacrosse_game['game_location']; ?></td>
   <td>
       <form method="post" action="players-by-game.php">
-        <input type-"hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
+        <input type="hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
         <button type="submit" class="btn btn-primary">Players in Game</button>
       </form>
           
