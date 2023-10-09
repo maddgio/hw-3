@@ -13,7 +13,7 @@ function selectPlayers() {
     }
 }
 ?> 
-
+<!-- 
 <?php
 function SelectGamePlayers($pid) {
     try {
@@ -29,5 +29,5 @@ function SelectGamePlayers($pid) {
         throw $e;
     }
 }
-?>
+?> -->
 
