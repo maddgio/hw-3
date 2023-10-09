@@ -9,7 +9,7 @@ while ($lax_player = $Player->fetch_assoc()) {
               <p class="card-text">
           <ul class="list-group">
         <?php
-          $Games = SelectPlayersByGame($lax_player['player_id']);
+          $Games = SelectPlayers($lax_player['player_id']);
           while ($game = $Games->fetch_assoc()) {
         ?>
             <li class="list-group-item"><?php echo $game['game_id']; ?> - <?php echo $game['game_date']; ?> - <?php echo $game['player_name']; ?> - <?php echo $game['player_name']; ?></li>
