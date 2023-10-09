@@ -17,7 +17,6 @@ while ($lax_player = $Player->fetch_assoc()) {
 }
 ?>
 </ul>
-      </p>
       <p class="card-text"><small class="text-body-secondary">Player; <?php echo $lax_player['player_id']; ?></small></p>
     </div>
 <?PHP
