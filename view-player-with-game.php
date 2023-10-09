@@ -8,18 +8,6 @@ while ($lax_player = $Player->fetch_assoc()) {
               <h5 class="card-title"><?php echo $lax_player['player_name']; ?></h5>
               <p class="card-text">
           <ul class="list-group">
-              <div class="card-body">
-              <h5 class="card-title"><?php echo $lax_player['player_name']; ?></h5>
-              <p class="card-text">
-          <ul class="list-group">
-              <div class="card-body">
-              <h5 class="card-title"><?php echo $lax_player['player_name']; ?></h5>
-              <p class="card-text">
-          <ul class="list-group">
-              <div class="card-body">
-              <h5 class="card-title"><?php echo $lax_player['player_name']; ?></h5>
-              <p class="card-text">
-          <ul class="list-group">
         <?php
           $Games = SelectPlayersByGame($lax_player['player_id']);
           while ($game = $Games->fetch_assoc()) {
@@ -31,7 +19,7 @@ while ($lax_player = $Player->fetch_assoc()) {
 </ul>
       <p class="card-text"><small class="text-body-secondary">Player; <?php echo $lax_player['player_id']; ?></small></p>
     </div>
-<?PHP
+<?php
 }
 ?> 
 </div>
