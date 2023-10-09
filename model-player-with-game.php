@@ -12,6 +12,7 @@ function selectPlayers() {
         throw $e;
     }
 }
+?> 
 
 <?php
 function SelectGamePlayers($pid) {
