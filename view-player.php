@@ -7,6 +7,7 @@
         <th>Name</th>
         <th>Postion</th>
         <th>School Year</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@ while ($lax_player = $Player->fetch_assoc()) {
   <td><?php echo $lax_player['player_name']; ?></td>
   <td><?php echo $lax_player['player_position']; ?></td>
   <td><?php echo $lax_player['player_year']; ?></td>
+<!-- PUT SOMETHING FOR THE LINK HERE -->
 </tr>
 <?PHP
 }
