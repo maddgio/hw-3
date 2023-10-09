@@ -12,7 +12,7 @@ while ($lax_player = $Player->fetch_assoc()) {
           $Games = SelectGamePlayers($lax_player['player_id']);
           while ($game = $Games->fetch_assoc()) {
         ?>
-            <li class="list-group-item"><?php echo $game['game_id']; ?> - <?php echo $game['game_date']; ?> - <?php echo $game['player_name']; ?> - <?php echo $game['time_played']; ?></li>
+            <li class="list-group-item"><?php echo $game['game_id']; ?> - <?php echo $game['game_date']; ?> - <?php echo $game['player_name']; ?></li>
   <?php
 }
 ?>
