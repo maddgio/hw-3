@@ -1,5 +1,5 @@
 <?php
-function SelectGamePlayers() {
+function SelectGamePlayers($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT t.player_id, p.name, t.game_id FROM `team` t join player p on t.player_id=p.player_id where t.player_id=?");
