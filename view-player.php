@@ -19,7 +19,7 @@ while ($lax_player = $Player->fetch_assoc()) {
   <td><?php echo $lax_player['player_name']; ?></td>
   <td><?php echo $lax_player['player_position']; ?></td>
   <td><?php echo $lax_player['player_year']; ?></td>
-  <td><a href="http://hw3.giovenco.oucreate.com/player-with-games.php">Player with Game</a></td>
+  <td><a href="<?php echo $lax_player['player_id']; ?>">Player with Game</a></td>
 </tr>
 <?PHP
 }
