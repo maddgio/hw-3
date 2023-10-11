@@ -3,7 +3,6 @@ function selectPlayers() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT player_id, player_name, player_position, player_year FROM `player` WHERE player_id=?");
-        $stmt->bind_param("i", $pid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
