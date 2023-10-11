@@ -4,7 +4,7 @@ require_once("model-player-with-game.php");
 
 $pageTitle = "Player with Game";
 include "view-header.php";
-$Player = SelectGamePlayers();
+$Player = SelectGamePlayers($pid);
 include "view-player-with-game.php";
 include "view-footer.php";
 ?>
