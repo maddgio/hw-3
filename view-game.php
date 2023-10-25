@@ -32,6 +32,9 @@ while ($lacrosse_game = $Game->fetch_assoc()) {
         <td><?php echo $lacrosse_game['game_date']; ?></td>
         <td><?php echo $lacrosse_game['game_location']; ?></td>
         <td>
+          <?php
+          include "view-games-editform.php";
+          ?>
         </td>
   <td>
        <td>
