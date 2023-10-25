@@ -1,6 +1,7 @@
 
 <div class="row">
 <div class="col">
+<h1>Games</h1>
 </div>
   <div class="col-auto">
 <?php
@@ -8,7 +9,7 @@
 ?>
   </div>
 <div>
-<h1>Games</h1>
+
 <div class="table-responsive">
   <table class="table">
     <thead>
