@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
 }
     break;
      case "Edit":
-    if (updateGame($_POST['gDate'], $_POST['gLocation'], $_POST['gid'])) {
+    if (updateGame($_POST['gDate'], $_POST['gLocation'], $_POST['pid'])) {
     echo '<div class="alert alert-success" role="alert">Game Edited</div>';
   } else {
     echo '<div class="alert alert-danger" role="alert">Error</div>';
 }
     break;
     case "Delete":
-    if (deleteGame($_POST['gid'])) {
+    if (deleteGame($_POST['pid'])) {
     echo '<div class="alert alert-success" role="alert">Game Deleted</div>';
   } else {
     echo '<div class="alert alert-danger" role="alert">Error</div>';
