@@ -41,8 +41,6 @@ while ($lacrosse_game = $Game->fetch_assoc()) {
         <input type="hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
         <button type="submit" class="btn btn-primary">Players in Game</button>
       </form>
-          
-  </td>
     <form method="post" action="">
         <input type="hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
         <input type="hidden" name="actionType" value="Delete">
