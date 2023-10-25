@@ -34,7 +34,7 @@ function updateGame($gDate, $gLocation, $gid) {
         $stmt->bind_param("ss", $gDate, $gLocation, $gid);
         $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
@@ -48,7 +48,7 @@ function deleteGame($gid) {
         $stmt->bind_param("i", $gid);
         $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
