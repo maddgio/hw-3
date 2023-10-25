@@ -27,6 +27,35 @@ function insertGamePlayers($gDate, $gLocation) {
     }
 }
 
+function selectPlayersforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT player_id, player_name, player_postion, player_year FROM `players` order by player_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectGamesforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT game_id, game_date, game_location FROM `lacrosse_games` order by game_date");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 function updateGamePlayers($gDate, $gLocation, $gid) {
     try {
         $conn = get_db_connection();
