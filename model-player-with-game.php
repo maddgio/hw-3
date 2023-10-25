@@ -1,9 +1,8 @@
 <?php
-function SelectGamePlayers($pid) {
+function selectGamePlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.player_id, p.player_name, t.game_id FROM `team` t join player p on t.player_id=p.player_id where p.player_id=?");
-        $stmt->bind_param("i", $pid);
+        $stmt = $conn->prepare("SELECT game_id, game_date, game_location FROM `lacrosse_games` ");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -14,50 +13,45 @@ function SelectGamePlayers($pid) {
     }
 }
 
-function insertGamePlayers($pid, $gid, $pname) {
+function insertGamePlayers($gDate, $gLocation) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO t.player_id, p.player_name, t.game_id FROM `team` t join player p on t.player_id=p.player_id where p.player_id=?");
-        $stmt->bind_param("i", $pid);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt = $conn->prepare("INSERT INTO `lacrosse_games` (`game_date`, `game_location`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $gDate, $gLocation);
+        $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
 
-function updateGamePlayers($pid) {
+function updateGamePlayers($gDate, $gLocation, $gid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.player_id, p.player_name, t.game_id FROM `team` t join player p on t.player_id=p.player_id where p.player_id=?");
-        $stmt->bind_param("i", $pid);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt = $conn->prepare("update 'lacrosse_games` set (`game_date` = ?, `game_location`=? ) WHERE game_id = ?");
+        $stmt->bind_param("ss", $gDate, $gLocation, $gid);
+        $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
 
-function deleteGamePlayers($pid) {
+function deleteGamePlayers($gid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.player_id, p.player_name, t.game_id FROM `team` t join player p on t.player_id=p.player_id where p.player_id=?");
-        $stmt->bind_param("i", $pid);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt = $conn->prepare("delete from lacrosse_games where game_id=?");
+        $stmt->bind_param("i", $gid);
+        $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
-
 ?>
-
