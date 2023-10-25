@@ -44,7 +44,7 @@ function updateGame($gDate, $gLocation, $gid) {
 function deleteGame($gid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from lacrosse_game where game_id=?");
+        $stmt = $conn->prepare("delete from lacrosse_games where game_id=?");
         $stmt->bind_param("i", $gid);
         $success = $stmt->execute();
         $conn->close();
