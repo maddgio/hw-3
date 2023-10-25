@@ -27,8 +27,6 @@
     <input type="text" class="form-control" id="gLocation" name="gLocation">
   </div>
           <input type="hidden" name="actionType" value="Add">
-                    <input type="hidden" name="actionType" value="Delete">
-
   <button type="submit" class="btn btn-primary">Save</button>
 </form>      
       </div>
