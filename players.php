@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
     }
 }
 
-$lax_players = selectPlayers();
+$lax_player = selectPlayers();
 include "view-player.php";
 include "view-footer.php";
 ?>
