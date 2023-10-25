@@ -26,6 +26,7 @@
     <label for="gLocation" class="form-label">Game Location</label>
     <input type="text" class="form-control" id="gLocation" name="gLocation">
   </div>
+          <input type="hidden" name="actionType" value="Add">
   <button type="submit" class="btn btn-primary">Save</button>
 </form>      
       </div>
