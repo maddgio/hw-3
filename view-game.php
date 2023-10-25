@@ -25,12 +25,12 @@
     </thead>
     <tbody>
 <?php
-while ($lacrosse_game = $Game->fetch_assoc()) {
+while ($lacrosse_games = $Game->fetch_assoc()) {
 ?>
 <tr>
-        <td><?php echo $lacrosse_game['game_id']; ?></td>
-        <td><?php echo $lacrosse_game['game_date']; ?></td>
-        <td><?php echo $lacrosse_game['game_location']; ?></td>
+        <td><?php echo $lacrosse_games['game_id']; ?></td>
+        <td><?php echo $lacrosse_games['game_date']; ?></td>
+        <td><?php echo $lacrosse_games['game_location']; ?></td>
         <td>
           <?php
           include "view-games-editform.php";
@@ -39,13 +39,13 @@ while ($lacrosse_game = $Game->fetch_assoc()) {
   <td>
        <td>
       <form method="post" action="players-by-game.php">
-        <input type="hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
+        <input type="hidden" name="pid" value="<?php echo $lacrosse_games['game_id']; ?>">
         <button type="submit" class="btn btn-primary">Players in Game</button>
       </form>
        </td>
   <td>
     <form method="post" action="">
-        <input type="hidden" name="pid" value="<?php echo $lacrosse_game['game_id']; ?>">
+        <input type="hidden" name="pid" value="<?php echo $lacrosse_games['game_id']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
