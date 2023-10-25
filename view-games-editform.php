@@ -23,6 +23,7 @@
     <label for="gLocation<?php echo $game['game_id']; ?>" class="form-label">Game Location</label>
     <input type="text" class="form-control" id="gLocation<?php echo $game['game_id']; ?>" name="gLocation" value="<?php echo $game['game_id']; ?>">
   </div>
+                    <input type="hidden" name="actionType" value="Edit">
   <button type="submit" class="btn btn-primary">Save</button>
 </form>      
       </div>
