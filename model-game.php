@@ -20,7 +20,7 @@ function insertGame($gDate, $gLocation) {
         $stmt->bind_param("ss", $gDate, $gLocation);
         $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
