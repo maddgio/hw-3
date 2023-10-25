@@ -6,22 +6,22 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editGameModal<?php echo $game['game_id']; ?>" tabindex="-1" aria-labelledby="editGameModalLabel<?php echo $game['game_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editGameModal<?php echo $lacrosse_games['game_id']; ?>" tabindex="-1" aria-labelledby="editGameModalLabel<?php echo $lacrosse_games['game_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editGameModalLabel<?php echo $game['game_id']; ?>">Edit Game</h1>
+        <h1 class="modal-title fs-5" id="editGameModalLabel<?php echo $lacrosse_games['game_id']; ?>">Edit Game</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="gDate<?php echo $game['game_id']; ?>" class="form-label">Game Date</label>
-          <input type="text" class="form-control" id="gDate<?php echo $game['game_id']; ?>" name="gDate" value="<?php echo $game['game_id']; ?>">
+            <label for="gDate<?php echo $lacrosse_games['game_id']; ?>" class="form-label">Game Date</label>
+          <input type="text" class="form-control" id="gDate<?php echo $lacrosse_games['game_id']; ?>" name="gDate" value="<?php echo $lacrosse_games['game_id']; ?>">
           </div>
     <div class="mb-3">
-    <label for="gLocation<?php echo $game['game_id']; ?>" class="form-label">Game Location</label>
-    <input type="text" class="form-control" id="gLocation<?php echo $game['game_id']; ?>" name="gLocation" value="<?php echo $game['game_id']; ?>">
+    <label for="gLocation<?php echo $lacrosse_games['game_id']; ?>" class="form-label">Game Location</label>
+    <input type="text" class="form-control" id="gLocation<?php echo $lacrosse_games['game_id']; ?>" name="gLocation" value="<?php echo $lacrosse_games['game_id']; ?>">
   </div>
                     <input type="hidden" name="actionType" value="Edit">
   <button type="submit" class="btn btn-primary">Save</button>
