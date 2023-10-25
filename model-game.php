@@ -13,7 +13,7 @@ function selectGame() {
     }
 }
 
-function inserttGame($gDate, $gLocation) {
+function insertGame($gDate, $gLocation) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `lacrosse_games` (`game_date`, `game_location`) VALUES (?, ?)");
@@ -30,8 +30,8 @@ function inserttGame($gDate, $gLocation) {
 function updateGame($gDate, $gLocation, $gid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update 'lacrosse_games` set (`game_date`, `game_location`) VALUES (?, ?)");
-        $stmt->bind_param("ss", $gDate, $gLocation);
+        $stmt = $conn->prepare("update 'lacrosse_games` set (`game_date` = ?, `game_location`=? ) WHERE game_id = ?");
+        $stmt->bind_param("ss", $gDate, $gLocation, $gid);
         $success = $stmt->execute();
         $conn->close();
         return $result;
@@ -41,11 +41,11 @@ function updateGame($gDate, $gLocation, $gid) {
     }
 }
 
-function inserttGame() {
+function deleteGame($gid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `lacrosse_games` (`game_date`, `game_location`) VALUES (?, ?)");
-        $stmt->bind_param("ss", $gDate, $gLocation);
+        $stmt = $conn->prepare("delete from lacrosse_game where game_id=?");
+        $stmt->bind_param("i", $gid);
         $success = $stmt->execute();
         $conn->close();
         return $result;
