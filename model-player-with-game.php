@@ -1,5 +1,5 @@
 <?php
-function selectGamePlayers() {
+function selectGamePlayers($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT game_id, game_date, game_location FROM `lacrosse_games` ");
