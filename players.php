@@ -30,7 +30,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
-$Game = selectPlayers();
+$Players = selectPlayers();
 include "view-player.php";
 include "view-footer.php";
 ?>
