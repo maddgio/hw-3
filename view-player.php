@@ -56,7 +56,13 @@ while ($lax_players = $Players->fetch_assoc()) {
       </form>
           
   </td>
-
+ </tr>     
+  <?php
+      }
+  ?> 
+    </tbody>
+  </table>
+</div>
 
     
 
