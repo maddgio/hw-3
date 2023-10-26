@@ -22,6 +22,7 @@ if (isset($_POST['actionType'])) {
     break;
   }
 }
+}
 $Game = selectGame();
 include "view-game.php";
 include "view-footer.php";
