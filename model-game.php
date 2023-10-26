@@ -31,7 +31,7 @@ function updateGame($gDate, $gLocation, $gid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update 'lacrosse_games` set (`game_date` = ?, `game_location`=? ) WHERE game_id = ?");
-        $stmt->bind_param("ss", $gDate, $gLocation, $gid);
+        $stmt->bind_param("ssi", $gDate, $gLocation, $gid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
