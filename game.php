@@ -3,7 +3,7 @@ require_once("util-db.php");
 require_once("model-game.php");
 $pageTitle = "Games";
 include "view-header.php";
-if (isset($_POST['actionType'])) {
+if (isset($_POST['actionType'])) { 
   switch ($_POST['actionType']) {
     case "Add":
     if (insertGame($_POST['gDate'], $_POST['gLocation'])) {
